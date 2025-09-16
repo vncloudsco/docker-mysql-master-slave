@@ -36,8 +36,6 @@ services:
     environment:
       WORDPRESS_DB_HOST: mysql_master:3306
       WORDPRESS_DB_USER: mydb_user
-      WP_DEBUG: 'true'
-      WP_DEBUG_LOG: 'true'
       WORDPRESS_DB_PASSWORD: mydb_pwd
       WORDPRESS_DB_NAME: mydb
     volumes:
