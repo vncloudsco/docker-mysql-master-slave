@@ -33,11 +33,11 @@ services:
     container_name: wordpress
     depends_on:
       - mysql_master
-    # environment:
-    #   WORDPRESS_DB_HOST: mysql_master:3306
-    #   WORDPRESS_DB_USER: wpuser
-    #   WORDPRESS_DB_PASSWORD: wppassword
-    #   WORDPRESS_DB_NAME: wordpress
+    environment:
+      WORDPRESS_DB_HOST: mysql_master:3306
+      WORDPRESS_DB_USER: mydb_user
+      WORDPRESS_DB_PASSWORD: mydb_pwd
+      WORDPRESS_DB_NAME: mydb
     volumes:
       - ./wordpress-data:/var/www/html
       - ./hyperdb/db-config.php:/var/www/html/wp-content/db-config.php
