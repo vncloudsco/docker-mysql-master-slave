@@ -29,7 +29,24 @@ services:
       - ./slave/data:/var/lib/mysql
     networks:
       - overlay
-
+  wordpress:
+    image: wordpress:6.5
+    container_name: wordpress
+    depends_on:
+      - mysql_master
+    # environment:
+    #   WORDPRESS_DB_HOST: mysql_master:3306
+    #   WORDPRESS_DB_USER: wpuser
+    #   WORDPRESS_DB_PASSWORD: wppassword
+    #   WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wordpress-data:/var/www/html
+      - ./hyperdb/db-config.php:/var/www/html/wp-content/db-config.php
+      - ./hyperdb/db.php:/var/www/html/wp-content/db.php
+    ports:
+      - "8080:80"
+    networks:
+      - overlay
 networks:
   overlay:
 
