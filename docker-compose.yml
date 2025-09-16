@@ -42,7 +42,7 @@ services:
       WORDPRESS_DB_NAME: mydb
     volumes:
       - ./wordpress-data:/var/www/html
-      - ./hyperdb/db-config.php:/var/www/html/wp-content/db-config.php
+      - ./hyperdb/db-config.php:/var/www/html/db-config.php
       - ./hyperdb/db.php:/var/www/html/wp-content/db.php
     ports:
       - "8080:80"
