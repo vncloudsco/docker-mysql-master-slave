@@ -9,8 +9,8 @@ services:
       WORDPRESS_DB_USER: mydb_user
       WORDPRESS_DB_PASSWORD: mydb_pwd
       WORDPRESS_DB_NAME: mydb
-      WORDPRESS_DB_HOST_MASTER: mysql_master:3306
-      WORDPRESS_DB_HOST_SLAVE: mysql_slave:3306
+      WORDPRESS_DB_HOST_MASTER: mysql_master
+      WORDPRESS_DB_HOST_SLAVE: mysql_slave
     volumes:
       - ./wordpress-data:/var/www/html
       - ./hyperdb/db-config.php:/var/www/html/db-config.php
