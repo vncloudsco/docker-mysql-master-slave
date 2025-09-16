@@ -8,7 +8,7 @@ $wpdb->add_database(array(
     'password' => '111',
     'name'     => 'mydb',
     'write'    => 1,
-    'read'     => 0,
+    'read'     => 1000,
 ));
 $wpdb->add_database(array(
     'host'     => 'mysql_slave',
