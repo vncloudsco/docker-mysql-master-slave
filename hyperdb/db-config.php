@@ -1,4 +1,7 @@
 <?php
+$wpdb->save_queries = true;
+$wpdb->persistent = true;
+$wpdb->check_tcp_responsiveness = true;
 $wpdb->add_database(array(
     'host'     => 'mysql_master',
     'user'     => 'root',
